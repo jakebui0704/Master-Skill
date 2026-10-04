@@ -1,0 +1,23 @@
+{
+  "skill_name": "master-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/master-skill I have a new idea: an app that helps small cafés in Saigon swap leftover pastries with each other before closing. I want to know if it's worth it. Where do I start?",
+      "expected_output": "Asks ONE question at a time (doesn't jump to advice), then once confirmed routes to the Idea → Validate playbook: ycofficehour first with a pass/fail number, Path A landing page, enhance-ux-ax, interview-synthesis. Ends with 'The next thing to do right now is ___'.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "which skill should i use to review our client's new website before launch? they want a report AND want us to fix the issues, the site is built in next.js and Thanh has the repo",
+      "expected_output": "Picks exactly one skill: enhance-ux-ax (audit + fix), explains why over ux-ui-audit and critic-layer, never suggests ux-ui-website-review. Assigns the fix work correctly between Jake/Thanh. May ask one clarifying question first.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Mình vừa phỏng vấn 8 khách hàng của Rally, có transcript rồi. Giờ nên dùng skill nào để tổng hợp?",
+      "expected_output": "Replies in Vietnamese. Picks one synthesis skill (interview-synthesis for per-quote traceability, or asks one question to decide between it and research-synthesis/synthesize-research), gives a copy-paste prompt, ends with the next-action line in Vietnamese.",
+      "files": []
+    }
+  ]
+}

@@ -107,12 +107,25 @@ and this file wasn't updated, **ask, don't guess**.
 - **Desktop Commander** (local-machine tools, mostly Thanh): `terminal`,
   `computer-health-check`, `ai-tools-setup`, `knowledge-base`, `obsidian-vault`.
 
+## Newly seen skills (NOT yet confirmed by Jake — ask before recommending)
+
+Seen in the live skill list in Oct 2026, not on the catalog above. Confirm with Jake whether
+he wants them listed as his:
+- `deep-research`: multi-source research reports (needs subagents)
+- `built-in-browser`, `chrome-browser`, `computer-use`: drive a browser or desktop
+  (useful for testing a live page; Jake's own choice)
+- `session-start-hook`: set up a repo for cloud sessions (Thanh's area)
+- `enhance-ux-ax` has changed: the live description is now "audit a whole website for UX and AX
+  at low cost, turn findings into tickets with annotated screenshots, and QA the fixes." The
+  older "fix mode on a git branch" wording is gone. Confirm what it does before relying on
+  the auto-fix step in the playbook.
+
 ## Connected tools (NOT skills, so confirm before relying on them)
 
 Seen connected in Jake's workspace in Oct 2026: Lovable (app builder), Vercel (hosting/deploy),
-Figma, Canva, Notion, ClickUp, Slack, Gmail, Google Calendar/Drive, Fathom & Fireflies (meeting
-notes), Atlassian (Jira/Confluence), Higgsfield (AI image/video). Suggest one only when it
-clearly beats the skill route, and say why.
+Webflow (site builder), Figma, Canva, Notion, ClickUp, Slack, Gmail, Google Calendar/Drive,
+Fathom & Fireflies (meeting notes), Atlassian (Jira/Confluence), Higgsfield (AI image/video).
+Suggest one only when it clearly beats the skill route, and say why.
 
 ## Jake vs Thanh
 

@@ -19,12 +19,19 @@ result is a decision, not just a nice page.
 - *Why:* stops weak ideas before you spend days on them, and sets the number that means "yes."
 - *How:* describe the idea and answer its questions. End with 4 lines: who it's for, what
   pain it solves, the riskiest assumption, and the pass number.
+- *Pick the right kind of pass number:*
+  - **Many anonymous users** (consumers, freelancers): a landing-page number, e.g. "10% of
+    300 visitors join the waitlist."
+  - **A small group of businesses you can name** (cafés, clinics, agencies): a conversation
+    number, e.g. "5 of 10 owners agree to a 1-week trial" or "3 pay a deposit." A landing page
+    adds little here; talk to them first, and consider a concierge test (see below).
 - *Where / who:* claude.ai, Jake.
 - *Sample prompt:*
   ```
   /ycofficehour I have an idea: [1–2 sentences]. Pressure-test it. End with exactly 4 lines:
-  target user, painful problem, riskiest assumption, and one pass/fail number for a
-  landing-page test (e.g. "10% of visitors join the waitlist from 300 visits").
+  target user, painful problem, riskiest assumption, and one pass/fail number. If the users
+  are a small group of businesses, make it a conversation number (e.g. "5 of 10 owners agree
+  to a trial"); otherwise a landing-page number (e.g. "10% of 300 visitors join the waitlist").
   ```
 
 ### Step 2: Shape the offer (`perception-first-design` → `solve`, about 30 min)
@@ -54,20 +61,21 @@ result is a decision, not just a nice page.
   Explain each step in plain language — I'm not technical.
   ```
 
-### Step 4: Polish & make it findable (`enhance-ux-ax`, fix mode, about 1 hour)
-- *Why:* your own skill catches mobile, contrast, CTA and SEO/AI-crawler issues, and it fixes
-  them, not just lists them.
-- *How:* run it on the live link in the same Claude Code session, accept the "Must" fixes,
-  redeploy.
+### Step 4: Polish & make it findable (`enhance-ux-ax fix`, about 1 hour)
+- *Why:* your own skill catches mobile, contrast, CTA and SEO/AI-crawler issues, and fixes
+  them on a safe side branch, not just lists them.
+- *How:* in the **same Claude Code session and repo** as Step 3 (fix mode needs the code, not
+  only the live link), make sure everything is committed, then run one fix round. Review the
+  report, merge the fix branch, redeploy. It won't touch your copy; it only suggests rewrites.
 - *Where / who:* Claude Code, Jake.
-- *Check first:* `enhance-ux-ax` changed recently and may no longer fix code by itself. If it
-  only audits and writes tickets, apply the "Must" items in Claude Code yourself (see
-  `catalog.md`, "Needs checking").
 - *Sample prompt:*
   ```
-  /enhance-ux-ax fix mode on [live URL]. Only fix the Must items — this is a validation
-  page, not a final product. Redeploy when done.
+  /enhance-ux-ax fix 1
+  The site's goal is: join the waitlist. This is a validation page, not a final product,
+  so focus on the Must items. When the round passes, merge the branch and redeploy.
   ```
+- *If you built it in Webflow or another no-code builder instead:* run `/enhance-ux-ax [live
+  URL]`. It can't edit there, but it tells you where to click to fix each item.
 
 ### Step 5: Send traffic & measure (no skill, normal work)
 - Share the link with the right people (communities, ads, network) until you reach the visit

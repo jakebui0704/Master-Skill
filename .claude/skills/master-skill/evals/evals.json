@@ -4,19 +4,19 @@
     {
       "id": 1,
       "prompt": "/master-skill I have a new idea: an app that helps small cafés in Saigon swap leftover pastries with each other before closing. I want to know if it's worth it. Where do I start?",
-      "expected_output": "Asks ONE question at a time (doesn't jump to advice), then once confirmed routes to the Idea → Validate playbook: ycofficehour first with a pass/fail number, Path A landing page, enhance-ux-ax, interview-synthesis. Ends with 'The next thing to do right now is ___'.",
+      "expected_output": "Asks ONE question at a time (doesn't jump to advice), then once confirmed routes to the Idea → Validate playbook: ycofficehour first with a pass/fail number that fits a small B2B audience (a conversation number such as '5 of 10 café owners agree to a trial', not only a landing-page %), concierge test considered. Ends with the bold next-action line.",
       "files": []
     },
     {
       "id": 2,
       "prompt": "which skill should i use to review our client's new website before launch? they want a report AND want us to fix the issues, the site is built in next.js and Thanh has the repo",
-      "expected_output": "Picks exactly one skill: enhance-ux-ax (audit + fix), explains why over ux-ui-audit and critic-layer, never suggests ux-ui-website-review. Assigns the fix work correctly between Jake/Thanh. May ask one clarifying question first.",
+      "expected_output": "Picks exactly one skill: enhance-ux-ax, explains why over ux-ui-audit and critic-layer, never suggests ux-ui-website-review. Knows fix mode needs the code in Claude Code (Thanh has the repo, so Thanh runs `/enhance-ux-ax fix` or gives Jake access) and that it never changes copy. May ask one clarifying question first. Ends with the bold next-action line.",
       "files": []
     },
     {
       "id": 3,
       "prompt": "Mình vừa phỏng vấn 8 khách hàng của Rally, có transcript rồi. Giờ nên dùng skill nào để tổng hợp?",
-      "expected_output": "Replies in Vietnamese. Picks one synthesis skill (interview-synthesis for per-quote traceability, or asks one question to decide between it and research-synthesis/synthesize-research), gives a copy-paste prompt, ends with the next-action line in Vietnamese.",
+      "expected_output": "Replies in Vietnamese. Picks one synthesis skill (interview-synthesis for per-quote traceability), or asks one question to decide between the synthesis skills. Gives a copy-paste prompt once decided. Ends with 'Việc cần làm ngay bây giờ là ___'.",
       "files": []
     }
   ]

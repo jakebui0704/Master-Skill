@@ -5,9 +5,10 @@ and this file wasn't updated, **ask, don't guess**.
 
 ## Overlapping skills (pick ONE)
 
-- **Website review:** needs an audit AND fixes to the code → `enhance-ux-ax`. Needs detailed
-  measurements, report only → `ux-ui-audit`. Wants to pin notes or draw on the live page, then
-  hand a brief to a coder → `critic-layer`. (`ux-ui-website-review` is OFF, so never suggest it.)
+- **Website review:** audit, or audit AND fix the code → `enhance-ux-ax` (fixes need the
+  project's code, see section D). Needs detailed measurements, report only → `ux-ui-audit`.
+  Wants to pin notes or draw on the live page, then hand a brief to a coder → `critic-layer`.
+  (`ux-ui-website-review` is OFF, so never suggest it.)
 - **Research synthesis:** deep customer interviews with every quote traceable →
   `interview-synthesis`. UX angle, themes + user segments → `research-synthesis`. PM angle,
   roadmap recommendations → `synthesize-research`. Merging ALL discovery outputs into one final
@@ -72,11 +73,24 @@ and this file wasn't updated, **ask, don't guess**.
 
 ## D. Review & quality checks (JAKE'S STRENGTH)
 
-- ⭐ `enhance-ux-ax` (Jake's own skill, ENABLED; behavior changed, see "Needs checking" below): audits and auto-FIXES a website for UX
-  (humans) and AX (SEO, LLMs, AI crawlers): hero, CTA, mobile at 375/768/1440,
-  WCAG, semantic HTML, meta/OG, JSON-LD, robots/sitemap/llms.txt. Gives a MoSCoW report
-  (Must/Should/Could/Won't). Fix mode edits the files on a git branch. PREFER it for any
-  "audit + fix" job.
+- ⭐ `enhance-ux-ax` (Jake's own skill, ENABLED): audits a WHOLE website for UX (humans)
+  and AX (search engines, LLM crawlers, AI agents), judged against the site's one goal (book a
+  demo, buy, sign up…). Core pages (home, product, pricing, about, contact) get a full browser
+  audit at 375/768/1440 px. Supporting pages (blog, docs, legal) are checked by template.
+  Covers hero, CTA, mobile layout, WCAG contrast, alt text, form labels, keyboard focus,
+  typography, motion, semantic HTML, meta/OG, JSON-LD, robots/sitemap/llms.txt, plus
+  Lighthouse scores before/after. Output: an evidence-backed MoSCoW report
+  (Must/Should/Could/Won't). PREFER it for any website audit or "audit + fix" job.
+  - **Two commands:** `/enhance-ux-ax [url]` = audit only, edits nothing.
+    `/enhance-ux-ax fix [rounds]` = audit, then 1–3 fix rounds on a new git branch, one commit
+    per round, each kept only if build, screenshots and re-audit pass.
+  - **Fix mode needs the project's code**: run it in Claude Code inside the site's repo, with
+    no uncommitted changes. On a live URL only, it can't edit; it gives paste-ready snippets.
+    On Webflow, Framer, Wix or Squarespace it can't edit either; it tells you where to click
+    in the builder.
+  - **It never changes copy** (it suggests 2–3 rewrites), never adds packages without asking,
+    and lists big changes (framework, rendering) as "needs your decision".
+  - Undo a round with `git revert <sha>`; the report names the branch and commits.
 - `ux-ui-audit`: every finding comes with a MEASUREMENT. Report only.
 - **Critic Layer:** `critic-layer` (notes and drawings right on the live page, turned into a
   brief), `brief`, `verify` (check the fixes were done right).
@@ -119,14 +133,6 @@ and this file wasn't updated, **ask, don't guess**.
 - `session-start-hook`: set up a repo so cloud Claude Code sessions can run tests and
   linters. Thanh's area.
 
-## Needs checking: `enhance-ux-ax`
-
-The live description changed: it now says "audit a whole website for UX and AX at low cost,
-turn findings into tickets with annotated screenshots, and QA the fixes." The older "fix mode
-edits files on a git branch" wording is gone. Until Jake has checked it, don't promise
-auto-fix; say it audits, writes tickets and QAs fixes, and ask what he wants it to do.
-(Jake paused this check on 2026-10-08.)
-
 ## Connected tools (NOT skills, so confirm before relying on them)
 
 Seen connected in Jake's workspace in Oct 2026: Lovable (app builder), Vercel (hosting/deploy),
@@ -138,7 +144,11 @@ Suggest one only when it clearly beats the skill route, and say why.
 
 - **Jake** (claude.ai, Claude Design, Cowork **and Claude Code**): research, UX, copy, design
   review, specs, prompts, comms, prototypes, simple landing pages, and running
-  `enhance-ux-ax` in fix mode. Groups 0, A, B, C, D, E (web-artifacts), F, G.
+  `enhance-ux-ax` (audit anywhere; fix mode on repos he has in Claude Code, like his own
+  landing pages). Groups 0, A, B, C, D, E (web-artifacts), F, G, H (except
+  `session-start-hook`).
+- **Client sites:** Jake runs the audit. Fix mode runs where the code lives: Thanh's repo means
+  Thanh runs `/enhance-ux-ax fix`, or gives Jake access first.
 - **Thanh** (Claude Code): logins, databases, payments, anything that must not break with
   real users' data, Figma design-to-code, `mcp-builder`, Desktop Commander.
 - **The bridge:** `design-handoff` (and `write-spec`) is how work moves from Jake to Thanh.

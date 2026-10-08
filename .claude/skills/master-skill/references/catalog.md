@@ -72,7 +72,7 @@ and this file wasn't updated, **ask, don't guess**.
 
 ## D. Review & quality checks (JAKE'S STRENGTH)
 
-- ⭐ `enhance-ux-ax` (Jake's own skill, ENABLED): audits and auto-FIXES a website for UX
+- ⭐ `enhance-ux-ax` (Jake's own skill, ENABLED; behavior changed, see "Needs checking" below): audits and auto-FIXES a website for UX
   (humans) and AX (SEO, LLMs, AI crawlers): hero, CTA, mobile at 375/768/1440,
   WCAG, semantic HTML, meta/OG, JSON-LD, robots/sitemap/llms.txt. Gives a MoSCoW report
   (Must/Should/Could/Won't). Fix mode edits the files on a git branch. PREFER it for any
@@ -107,18 +107,25 @@ and this file wasn't updated, **ask, don't guess**.
 - **Desktop Commander** (local-machine tools, mostly Thanh): `terminal`,
   `computer-health-check`, `ai-tools-setup`, `knowledge-base`, `obsidian-vault`.
 
-## Newly seen skills (NOT yet confirmed by Jake — ask before recommending)
+## H. Added Oct 2026 (Jake confirmed he uses these)
 
-Seen in the live skill list in Oct 2026, not on the catalog above. Confirm with Jake whether
-he wants them listed as his:
-- `deep-research`: multi-source research reports (needs subagents)
-- `built-in-browser`, `chrome-browser`, `computer-use`: drive a browser or desktop
-  (useful for testing a live page; Jake's own choice)
-- `session-start-hook`: set up a repo for cloud sessions (Thanh's area)
-- `enhance-ux-ax` has changed: the live description is now "audit a whole website for UX and AX
-  at low cost, turn findings into tickets with annotated screenshots, and QA the fixes." The
-  older "fix mode on a git branch" wording is gone. Confirm what it does before relying on
-  the auto-fix step in the playbook.
+- `deep-research`: multi-source research reports (comparing options, markets, trends).
+  Needs subagents. Jake, in claude.ai or Claude Code.
+- `built-in-browser`, `chrome-browser`: let Claude drive a browser, for example to check a
+  live page. `chrome-browser` uses Jake's real Chrome and sign-ins; `built-in-browser` is the
+  in-app pane. Pick `chrome-browser` when a login is needed. Jake.
+- `computer-use`: let Claude click and type in desktop apps. Only when no browser or
+  connector route exists. Jake, on his own computer.
+- `session-start-hook`: set up a repo so cloud Claude Code sessions can run tests and
+  linters. Thanh's area.
+
+## Needs checking: `enhance-ux-ax`
+
+The live description changed: it now says "audit a whole website for UX and AX at low cost,
+turn findings into tickets with annotated screenshots, and QA the fixes." The older "fix mode
+edits files on a git branch" wording is gone. Until Jake has checked it, don't promise
+auto-fix; say it audits, writes tickets and QAs fixes, and ask what he wants it to do.
+(Jake paused this check on 2026-10-08.)
 
 ## Connected tools (NOT skills, so confirm before relying on them)
 

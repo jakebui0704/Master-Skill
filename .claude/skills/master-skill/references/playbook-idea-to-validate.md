@@ -60,6 +60,9 @@ result is a decision, not just a nice page.
 - *How:* run it on the live link in the same Claude Code session, accept the "Must" fixes,
   redeploy.
 - *Where / who:* Claude Code, Jake.
+- *Check first:* `enhance-ux-ax` changed recently and may no longer fix code by itself. If it
+  only audits and writes tickets, apply the "Must" items in Claude Code yourself (see
+  `catalog.md`, "Needs checking").
 - *Sample prompt:*
   ```
   /enhance-ux-ax fix mode on [live URL]. Only fix the Must items — this is a validation
